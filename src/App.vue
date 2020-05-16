@@ -14,7 +14,7 @@ export default {
     // 保持データのストアを供給する。
     store.provideStore(store)
     // 初期データを取得する。
-    onMounted(() => store.listItems())
+    onMounted(() => store.listItems(store.state))
   }
 }
 </script>

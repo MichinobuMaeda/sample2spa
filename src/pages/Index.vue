@@ -32,7 +32,7 @@
                 />
                 <q-btn
                   class="q-ml-sm" round color="negative" icon="delete"
-                  @click="confrimDeleteItem(item, () => { $refs.confirmDeleteitem.show() })"
+                  @click="setActiveItem(state, item.id, () => { $refs.confirmDeleteitem.show() })"
                 />
               </td>
             </tr>
@@ -49,10 +49,10 @@
           <div class="text-h6 text-negative">警告</div>
         </q-card-section>
         <q-card-section class="q-pt-none">
-          ID: {{ state.itemActive.id }} {{ state.itemActive.name }} を本当に削除しますか？
+          ID: {{ state.activeItem.id }} {{ state.activeItem.name }} を本当に削除しますか？
         </q-card-section>
         <q-card-actions align="right">
-          <q-btn label="削除" color="negative" @click="deleteItem" v-close-popup />
+          <q-btn label="削除" color="negative" @click="deleteItem(state)" v-close-popup />
           <q-btn label="中止" v-close-popup />
         </q-card-actions>
       </q-card>
