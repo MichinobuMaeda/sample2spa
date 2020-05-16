@@ -37,7 +37,7 @@ $ cd sample1api
 $ php -S 0.0.0.0:8000 -t public
 ```
 
-Sample 2 SAP を起動する。
+Sample 2 SPA を起動する。
 
 ```shell script
 $ git clone git@github.com:MichinobuMaeda/sample2spa.git
