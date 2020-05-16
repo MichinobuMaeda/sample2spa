@@ -17,7 +17,7 @@ export const listItems = async (state) => { state.items = [...(await api.getItem
 // 編集対象の商品を設定する。
 export const setActiveItem = (state, id, next) => {
   state.activeItem = id === 'new' ? { id: 'new' } : utils.getById(state.items, id)
-  next && next()
+  return next && next()
 }
 
 // 商品の削除を実行する。
@@ -42,7 +42,7 @@ export const saveItem = (state, form, next) => utils.waitUpdateForProc(
     } else {
       await api.putItem(state.activeItem)
     }
-    next && next()
     // 商品一覧を取得する。
     await listItems(state)
+    return next && next()
   })
