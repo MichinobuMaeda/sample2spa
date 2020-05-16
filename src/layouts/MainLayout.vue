@@ -12,10 +12,14 @@
         />
 
         <q-toolbar-title>
-          Quasar App
+          Sample 2 SPA
         </q-toolbar-title>
 
-        <div>Quasar v{{ $q.version }}</div>
+        <div>
+          <a class="text-white" href="https://quasar.dev/" target="_blank" rel="noreferrer noopen">
+            Quasar v{{ $q.version }}
+          </a>
+        </div>
       </q-toolbar>
     </q-header>
 
@@ -30,7 +34,7 @@
           header
           class="text-grey-8"
         >
-          Essential Links
+          外部リンク
         </q-item-label>
         <EssentialLink
           v-for="link in essentialLinks"
@@ -61,46 +65,22 @@ export default {
       leftDrawerOpen: false,
       essentialLinks: [
         {
-          title: 'Docs',
-          caption: 'quasar.dev',
-          icon: 'school',
-          link: 'https://quasar.dev'
-        },
-        {
           title: 'Github',
-          caption: 'github.com/quasarframework',
+          caption: 'このサンプルのソース',
           icon: 'code',
-          link: 'https://github.com/quasarframework'
+          link: 'https://github.com/MichinobuMaeda/sample2spa'
         },
         {
-          title: 'Discord Chat Channel',
-          caption: 'chat.quasar.dev',
-          icon: 'chat',
-          link: 'https://chat.quasar.dev'
+          title: 'Sample 1 API',
+          caption: 'HTTP API のサンプルのソース',
+          icon: 'code',
+          link: 'https://github.com/MichinobuMaeda/sample1api'
         },
         {
-          title: 'Forum',
-          caption: 'forum.quasar.dev',
-          icon: 'record_voice_over',
-          link: 'https://forum.quasar.dev'
-        },
-        {
-          title: 'Twitter',
-          caption: '@quasarframework',
-          icon: 'rss_feed',
-          link: 'https://twitter.quasar.dev'
-        },
-        {
-          title: 'Facebook',
-          caption: '@QuasarFramework',
-          icon: 'public',
-          link: 'https://facebook.quasar.dev'
-        },
-        {
-          title: 'Quasar Awesome',
-          caption: 'Community Quasar projects',
-          icon: 'favorite',
-          link: 'https://awesome.quasar.dev'
+          title: 'みちのぶのねぐら',
+          caption: '作者のホームページ',
+          icon: 'home',
+          link: 'https://michinobu.jp'
         }
       ]
     }
