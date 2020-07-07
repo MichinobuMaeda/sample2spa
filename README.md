@@ -29,7 +29,7 @@ $ quasar --version
 ```
 
 [Sample 1 API](https://github.com/MichinobuMaeda/sample1api)
-を起動しておく。
+の「プロジェクトの利用」の手順で HTTP API を起動しておく。
 
 ```shell script
 $ git clone git@github.com:MichinobuMaeda/sample1api.git
